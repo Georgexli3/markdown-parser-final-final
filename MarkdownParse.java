@@ -16,6 +16,11 @@ public class MarkdownParse {
             int closeBracket = markdown.indexOf("]", openBracket);
             int openParen = markdown.indexOf("(", closeBracket);
             int closeParen = markdown.indexOf(")", openParen);
+            if (openBracket == -1 || closeBracket == -1 || openParen == -1 || closeParen == -1) {
+            	System.out.println("Invalid URL formatting detected at some point. Saving currently stored URLs...");
+            	System.out.println("Make sre you have no trailing blank lines at the end of the file!");
+            	break;
+            }
             toReturn.add(markdown.substring(openParen + 1, closeParen));
             currentIndex = closeParen + 1;
         }
