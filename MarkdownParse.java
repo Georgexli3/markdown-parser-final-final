@@ -22,7 +22,7 @@ public class MarkdownParse {
                 	System.out.println("Make sre you have no trailing blank lines at the end of the file!");
                 	break;
             	} else {
-            		System.out.println("Found no URLs in this file.");
+            		System.out.println("Found no valid URLs in this file.");
             		break;
             	}
             }
