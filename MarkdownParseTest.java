@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import static org.junit.Assert.*; 
-import org.junit.*;
-public class MarkdownParseTest {
-@Test
-public void addition() {
-assertEquals(2, 1 + 1);
-} 
-} 
-=======
 import static org.junit.Assert.assertEquals;
 
 import java.io.IOException;
@@ -37,4 +27,3 @@ public class MarkdownParseTest {
 	}
 	
 }
->>>>>>> d395533afbea71c37169633e48aeb8a61b361843
