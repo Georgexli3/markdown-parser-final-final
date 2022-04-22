@@ -27,10 +27,37 @@ public class MarkdownParseTest {
 	@Test
 	public void testMarkdownFileOne() {
 		ArrayList<String> toReturn = new ArrayList<>();
+		toReturn.add("https://something.com");
+		toReturn.add("some-thing.html");
+		
+		try {
+			assertEquals(toReturn, MarkdownParse.getLinks(Files.readString(Path.of("/Users/dominicfeliton/Documents/GitHub/markdown-parser/test-file.md"))));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	@Test
+	public void testMarkdownFileTwo() {
+		ArrayList<String> toReturn = new ArrayList<>();
 		toReturn.add("test.html");
 		
 		try {
 			assertEquals(toReturn, MarkdownParse.getLinks(Files.readString(Path.of("/Users/dominicfeliton/Documents/GitHub/markdown-parser/test-file2.md"))));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	@Test
+	public void testMarkdownFileThree() {
+		ArrayList<String> toReturn = new ArrayList<>();
+		toReturn.add("https://something.com");
+		toReturn.add("some-thing.html");
+		toReturn.add("testing.html");
+		
+		try {
+			assertEquals(toReturn, MarkdownParse.getLinks(Files.readString(Path.of("/Users/dominicfeliton/Documents/GitHub/markdown-parser/test-file3.md"))));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

@@ -19,8 +19,8 @@ public class MarkdownParse {
             if (openBracket == -1 || closeBracket == -1 || openParen == -1 || closeParen == -1) {
             	if (!toReturn.isEmpty()) {
             		System.out.println("Invalid URL formatting detected at some point. Saving currently stored URLs...");
-                	System.out.println("Make sre you have no trailing blank lines at the end of the file!");
-                	break;
+                	System.out.println("Make sure you have no trailing blank lines at the end of the file!");
+                	return toReturn;
             	} else {
             		System.out.println("Found no valid URLs in this file.");
             		break;
