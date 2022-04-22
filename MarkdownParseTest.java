@@ -52,5 +52,18 @@ public class MarkdownParseTest {
 			e.printStackTrace();
 		}
 	}
+
+	@Test
+	public void testMarkDownDiffTestFile(){
+		ArrayList<String> toReturn = new ArrayList<>();
+		toReturn.add("LarrySchmit.html");
+		toReturn.add("EldenRing.com");
+		toReturn.add("ImSoTiredPleaseHelp.html");
+		try{
+			assertEquals(toReturn, MarkdownParse.getLinks(Files.readString(Path.of("/Users/linkh/OneDrive/Documents/GitHub/mark-down-parser 2.0/markdown-parser/different-test-file.md"))));
+		} catch(IOException e){
+			e.printStackTrace();
+		}
+	}
 	
 }
