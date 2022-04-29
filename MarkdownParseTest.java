@@ -17,7 +17,6 @@ public class MarkdownParseTest {
 	@Test
 	public void testMarkdownFileOne() {
 		ArrayList<String> toReturn = new ArrayList<>();
-		toReturn.add("https://something.com");
 		toReturn.add("some-thing.html");
 		
 		try {
@@ -54,14 +53,23 @@ public class MarkdownParseTest {
 	}
 
 	@Test
-	public void testMarkDownDiffTestFile(){
+	public void testMarkdownFileFour(){
 		ArrayList<String> toReturn = new ArrayList<>();
-		toReturn.add("LarrySchmit.html");
-		toReturn.add("EldenRing.com");
-		toReturn.add("ImSoTiredPleaseHelp.html");
 		try{
-			assertEquals(toReturn, MarkdownParse.getLinks(Files.readString(Path.of("/Users/linkh/OneDrive/Documents/GitHub/mark-down-parser 2.0/markdown-parser/different-test-file.md"))));
+			assertEquals(toReturn, MarkdownParse.getLinks(Files.readString(Path.of("/Users/dominicfeliton/Documents/GitHub/markdown-parser/test-file4.md"))));
 		} catch(IOException e){
+			e.printStackTrace();
+		}
+	}
+	
+	@Test
+	public void testMarkdownFileFive() {
+		ArrayList<String> toReturn = new ArrayList<>();
+		toReturn.add("test-website");
+		toReturn.add("second-test-website");
+		try {
+			assertEquals(toReturn, MarkdownParse.getLinks(Files.readString(Path.of("/Users/dominicfeliton/Documents/GitHub/markdown-parser/test-file4.md"))));
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
