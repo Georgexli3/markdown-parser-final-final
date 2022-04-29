@@ -68,7 +68,7 @@ public class MarkdownParseTest {
 		toReturn.add("test-website");
 		toReturn.add("second-test-website");
 		try {
-			assertEquals(toReturn, MarkdownParse.getLinks(Files.readString(Path.of("/Users/dominicfeliton/Documents/GitHub/markdown-parser/test-file4.md"))));
+			assertEquals(toReturn, MarkdownParse.getLinks(Files.readString(Path.of("/Users/dominicfeliton/Documents/GitHub/markdown-parser/test-file5.md"))));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
